@@ -67,174 +67,178 @@ class _TrendPageState extends State<TrendPage> {
           ),
         ],
       ),
-      body: ListView(
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text("Trend Topics",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Pallete.textColor,
-                )),
-          ),
-          ListTile(
-            title: Text(
-              "Trending in Japan",
-              style: TextStyle(
-                color: Colors.grey[700],
+      body: Stack(
+        children: [
+          ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Trend Topics",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    )),
               ),
-            ),
-            subtitle: ListTile(
-              contentPadding: EdgeInsets.all(0),
-              title: Text(
-                "#Flutter",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Pallete.textColor,
+              ListTile(
+                title: Text(
+                  "Trending in Japan",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
                 ),
-              ),
-              subtitle: Text(
-                "1,234 Tweets",
-                style: TextStyle(
-                  color: Colors.grey,
+                subtitle: ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "#Flutter",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "1,234 Tweets",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
-            ),
-          ),
-          ListTile(
-            title: Text(
-              "Trending in Japan",
-              style: TextStyle(
-                color: Colors.grey[700],
-              ),
-            ),
-            subtitle: ListTile(
-              contentPadding: EdgeInsets.all(0),
-              title: Text(
-                "#LGS2023",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                trailing: Icon(
+                  Icons.more_vert,
                   color: Pallete.textColor,
                 ),
               ),
-              subtitle: Text(
-                "1,234 Tweets",
-                style: TextStyle(
-                  color: Colors.grey,
+              ListTile(
+                title: Text(
+                  "Trending in Japan",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
                 ),
-              ),
-            ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
-            ),
-          ),
-          ListTile(
-            title: Text(
-              "Trending in Japan",
-              style: TextStyle(
-                color: Colors.grey[700],
-              ),
-            ),
-            subtitle: ListTile(
-              contentPadding: EdgeInsets.all(0),
-              title: Text(
-                "#Barbie",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                subtitle: ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "#LGS2023",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "1,234 Tweets",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                trailing: Icon(
+                  Icons.more_vert,
                   color: Pallete.textColor,
                 ),
               ),
-              subtitle: Text(
-                "1,234 Tweets",
-                style: TextStyle(
-                  color: Colors.grey,
+              ListTile(
+                title: Text(
+                  "Trending in Japan",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
                 ),
-              ),
-            ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
-            ),
-          ),
-          ListTile(
-            title: Text(
-              "Trending in Japan",
-              style: TextStyle(
-                color: Colors.grey[700],
-              ),
-            ),
-            subtitle: ListTile(
-              contentPadding: EdgeInsets.all(0),
-              title: Text(
-                "#TwitterX",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                subtitle: ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "#Barbie",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "1,234 Tweets",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                trailing: Icon(
+                  Icons.more_vert,
                   color: Pallete.textColor,
                 ),
               ),
-              subtitle: Text(
-                "234 Tweets",
-                style: TextStyle(
-                  color: Colors.grey,
+              ListTile(
+                title: Text(
+                  "Trending in Japan",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
                 ),
-              ),
-            ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
-            ),
-          ),
-          ListTile(
-            title: Text(
-              "Trending in Japan",
-              style: TextStyle(
-                color: Colors.grey[700],
-              ),
-            ),
-            subtitle: ListTile(
-              contentPadding: EdgeInsets.all(0),
-              title: Text(
-                "Yaz",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                subtitle: ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "#TwitterX",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "234 Tweets",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                trailing: Icon(
+                  Icons.more_vert,
                   color: Pallete.textColor,
                 ),
               ),
-              subtitle: Text(
-                "1,234 Tweets",
-                style: TextStyle(
-                  color: Colors.grey,
+              ListTile(
+                title: Text(
+                  "Trending in Japan",
+                  style: TextStyle(
+                    color: Colors.grey[700],
+                  ),
+                ),
+                subtitle: ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  title: Text(
+                    "Yaz",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Pallete.textColor,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "1,234 Tweets",
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                trailing: Icon(
+                  Icons.more_vert,
+                  color: Pallete.textColor,
                 ),
               ),
-            ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              setState(() {
-                Navigator.pop(context);
-                Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (context) => TrendTopics()),
-                    (route) => false);
-              });
-            },
-            child: Text(
-              "Daha fazla göster",
-              style: TextStyle(
-                color: Pallete.twitterBlue,
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    Navigator.pop(context);
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => TrendTopics()),
+                        (route) => false);
+                  });
+                },
+                child: Text(
+                  "Daha fazla göster",
+                  style: TextStyle(
+                    color: Pallete.twitterBlue,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),
