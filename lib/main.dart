@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:twitter_clone/my_pages/bottom_navigation_bar.dart';
 import 'package:twitter_clone/my_pages/drawer.dart';
 import 'package:twitter_clone/my_pages/home_page.dart';
+import 'package:twitter_clone/trend_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -52,13 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       bottomNavigationBar: BottomNavigationBars(),
       drawer: DrawerMenu(),
       // body: _selectedIndex <= allPages!.length - 1
       //     ? allPages![_selectedIndex]
       //     : allPages![0],
-      body: HomePage(),
+      body: TrendPage(),
     );
   }
 }

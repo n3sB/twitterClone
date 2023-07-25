@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
 import 'package:twitter_clone/drawer.dart';
+import 'package:twitter_clone/my_pages/bottom_navigation_bar.dart';
 import 'package:twitter_clone/trend_settings.dart';
-
-import 'bottom_navigavition_bar.dart';
+import 'package:twitter_clone/trend_topics.dart';
+import 'custom_delegate.dart';
 
 class TrendPage extends StatefulWidget {
   @override
@@ -219,7 +220,15 @@ class _TrendPageState extends State<TrendPage> {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                Navigator.pop(context);
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => TrendTopics()),
+                    (route) => false);
+              });
+            },
             child: Text(
               "Daha fazla göster",
               style: TextStyle(
@@ -230,76 +239,6 @@ class _TrendPageState extends State<TrendPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBars(),
-    );
-  }
-}
-
-class CustomSearchDelegate extends SearchDelegate {
-  List<String> searchTerms = [
-    "Apple",
-    "Banana",
-    "Cherry",
-    "Durian",
-    "Mango",
-    "Fig",
-  ];
-  @override
-  List<Widget>? buildActions(BuildContext context) {
-    return [
-      IconButton(
-        onPressed: () {
-          query = "";
-        },
-        icon: const Icon(Icons.clear),
-      ),
-    ];
-  }
-
-  @override
-  Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        close(context, "");
-      },
-      icon: const Icon(Icons.arrow_back),
-    );
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
-    );
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
     );
   }
 }
