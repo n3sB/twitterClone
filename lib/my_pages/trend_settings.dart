@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
 import 'package:twitter_clone/my_pages/trend_page.dart';
@@ -85,6 +87,7 @@ class _trendSettings extends State<TrendSettings> {
             ),
           ),
           ListTile(
+            // ignore: prefer_const_constructors
             title: Padding(
               padding: const EdgeInsets.only(
                 left: 15,

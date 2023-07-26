@@ -1,6 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
-import 'package:twitter_clone/trend_page.dart';
+import 'my_pages/trend_page.dart';
 
 class TrendSettings extends StatefulWidget {
   @override
@@ -15,19 +17,6 @@ class _trendSettings extends State<TrendSettings> {
     return Scaffold(
       backgroundColor: Pallete.primaryColor,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (context) => TrendPage()),
-                (route) => false);
-          },
-          icon: Icon(
-            Icons.arrow_back,
-            color: Pallete.textColor,
-          ),
-        ),
         title: ListTile(
           title: Text(
             "Keşfetme Ayarları",

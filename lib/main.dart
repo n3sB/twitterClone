@@ -2,13 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
 import 'package:twitter_clone/my_pages/drawer.dart';
 import 'package:twitter_clone/my_pages/home_page.dart';
-<<<<<<< HEAD
-import 'package:twitter_clone/trend_page.dart';
-=======
 import 'package:twitter_clone/my_pages/messages_page.dart';
 import 'package:twitter_clone/my_pages/notifation_main.dart';
 import 'package:twitter_clone/my_pages/trend_page.dart';
->>>>>>> d9898daa51c84e99f26b6dbb7246ada728291e32
 
 void main() => runApp(const MyApp());
 
@@ -64,22 +60,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   List pages = [
     const HomePage(),
-    const TrendPage(),
+    TrendPage(),
     const NotificationsPage(),
     const MessageScreen(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-      bottomNavigationBar: BottomNavigationBars(),
-      drawer: DrawerMenu(),
-      // body: _selectedIndex <= allPages!.length - 1
-      //     ? allPages![_selectedIndex]
-      //     : allPages![0],
-      body: TrendPage(),
-    );
-=======
         drawer: const DrawerMenu(),
         // body: _selectedIndex <= allPages!.length - 1
         //     ? allPages![_selectedIndex]
@@ -117,6 +104,5 @@ class _MyHomePageState extends State<MyHomePage> {
           selectedItemColor: Colors.blue,
           onTap: _onItemTapped,
         ));
->>>>>>> d9898daa51c84e99f26b6dbb7246ada728291e32
   }
 }

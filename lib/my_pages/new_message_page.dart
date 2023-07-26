@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class NewMessagePage extends StatefulWidget {
@@ -69,6 +71,7 @@ class _NewMessagePageState extends State<NewMessagePage> {
                   filterSearchResults(value);
                 },
                 controller: editingController,
+                // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                   //  labelText: "Kişileri ve grupları ara",
                   hintText: "Kişileri ve grupları ara",

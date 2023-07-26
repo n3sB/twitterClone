@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
 
@@ -52,6 +54,7 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: TextStyle(
               color: Pallete.textColor,
+              decorationColor: Pallete.textColor,
             ),
           ),
         );
@@ -77,6 +80,7 @@ class CustomSearchDelegate extends SearchDelegate {
             result,
             style: TextStyle(
               color: Pallete.textColor,
+              decorationColor: Pallete.textColor,
             ),
           ),
         );
@@ -87,10 +91,24 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   ThemeData appBarTheme(BuildContext context) {
     return Theme.of(context).copyWith(
-        scaffoldBackgroundColor: Pallete.primaryColor,
-        appBarTheme: AppBarTheme(
-          color: Pallete.primaryColor,
+      scaffoldBackgroundColor: Pallete.primaryColor,
+      appBarTheme: AppBarTheme(
+        backgroundColor: Pallete.primaryColor,
+      ),
+      hintColor: Pallete.textColor,
+      textTheme: TextTheme(
+        headline6: TextStyle(
+          color: Pallete.textColor,
         ),
-        hintColor: Pallete.textColor);
+      ),
+      primaryTextTheme: TextTheme(
+        headline6: TextStyle(color: Colors.white),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        hintStyle: TextStyle(
+          color: Pallete.textColor,
+        ),
+      ),
+    );
   }
 }

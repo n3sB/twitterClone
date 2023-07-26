@@ -1,12 +1,15 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/constant.dart';
+import 'package:twitter_clone/drawer.dart';
 import 'package:twitter_clone/my_pages/bottom_navigation_bar.dart';
-import 'package:twitter_clone/my_pages/drawer.dart';
-import 'package:twitter_clone/my_pages/trend_settings.dart';
+import 'package:twitter_clone/trend_settings.dart';
+import 'package:twitter_clone/trend_topics.dart';
+
+import '../custom_delegate.dart';
 
 class TrendPage extends StatefulWidget {
-  const TrendPage({Key? key}) : super(key: key);
   @override
   State<StatefulWidget> createState() => _TrendPageState();
 }
@@ -55,12 +58,11 @@ class _TrendPageState extends State<TrendPage> {
               ),
               IconButton(
                   onPressed: () {
-                    Navigator.pop(context);
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
                             builder: (context) => TrendSettings()),
-                        (route) => false);
+                        (route) => true);
                   },
                   icon: Icon(Icons.settings))
             ],
@@ -102,9 +104,61 @@ class _TrendPageState extends State<TrendPage> {
                 ),
               ),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
+            trailing: IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 100,
+                        color: Pallete.primaryColor,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "İlgimi çekmiyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bu gündem başlığı zararlı veya spam içeriyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    });
+              },
+              icon: Icon(
+                Icons.more_vert,
+                color: Pallete.textColor,
+              ),
             ),
           ),
           ListTile(
@@ -130,9 +184,61 @@ class _TrendPageState extends State<TrendPage> {
                 ),
               ),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
+            trailing: IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 100,
+                        color: Pallete.primaryColor,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "İlgimi çekmiyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bu gündem başlığı zararlı veya spam içeriyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    });
+              },
+              icon: Icon(
+                Icons.more_vert,
+                color: Pallete.textColor,
+              ),
             ),
           ),
           ListTile(
@@ -158,9 +264,61 @@ class _TrendPageState extends State<TrendPage> {
                 ),
               ),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
+            trailing: IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 100,
+                        color: Pallete.primaryColor,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "İlgimi çekmiyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bu gündem başlığı zararlı veya spam içeriyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    });
+              },
+              icon: Icon(
+                Icons.more_vert,
+                color: Pallete.textColor,
+              ),
             ),
           ),
           ListTile(
@@ -186,9 +344,61 @@ class _TrendPageState extends State<TrendPage> {
                 ),
               ),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
+            trailing: IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 100,
+                        color: Pallete.primaryColor,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "İlgimi çekmiyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bu gündem başlığı zararlı veya spam içeriyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    });
+              },
+              icon: Icon(
+                Icons.more_vert,
+                color: Pallete.textColor,
+              ),
             ),
           ),
           ListTile(
@@ -214,13 +424,72 @@ class _TrendPageState extends State<TrendPage> {
                 ),
               ),
             ),
-            trailing: Icon(
-              Icons.more_vert,
-              color: Pallete.textColor,
+            trailing: IconButton(
+              onPressed: () {
+                showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 100,
+                        color: Pallete.primaryColor,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "İlgimi çekmiyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bu gündem başlığı zararlı veya spam içeriyor",
+                                      style:
+                                          TextStyle(color: Pallete.textColor),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    });
+              },
+              icon: Icon(
+                Icons.more_vert,
+                color: Pallete.textColor,
+              ),
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => TrendTopics()),
+                    (route) => true);
+              });
+            },
             child: Text(
               "Daha fazla göster",
               style: TextStyle(
@@ -230,76 +499,6 @@ class _TrendPageState extends State<TrendPage> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class CustomSearchDelegate extends SearchDelegate {
-  List<String> searchTerms = [
-    "Apple",
-    "Banana",
-    "Cherry",
-    "Durian",
-    "Mango",
-    "Fig",
-  ];
-  @override
-  List<Widget>? buildActions(BuildContext context) {
-    return [
-      IconButton(
-        onPressed: () {
-          query = "";
-        },
-        icon: const Icon(Icons.clear),
-      ),
-    ];
-  }
-
-  @override
-  Widget? buildLeading(BuildContext context) {
-    return IconButton(
-      onPressed: () {
-        close(context, "");
-      },
-      icon: const Icon(Icons.arrow_back),
-    );
-  }
-
-  @override
-  Widget buildResults(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
-    );
-  }
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    List<String> matchQuery = [];
-    for (var fruit in searchTerms) {
-      if (fruit.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(fruit);
-      }
-    }
-    return ListView.builder(
-      itemCount: matchQuery.length,
-      itemBuilder: (context, index) {
-        var result = matchQuery[index];
-        return ListTile(
-          title: Text(result),
-        );
-      },
     );
   }
 }
